@@ -7,7 +7,7 @@
  */
 int _printf(const char *format, ...)
 {
-	int len = 0;
+	int length = 0;
 	va_list args;
 	special specifier[] = {
 		{'c', print_char},
@@ -15,9 +15,6 @@ int _printf(const char *format, ...)
 		{'%', print_mod},
 		{'d', print_int},
 		{'i', print_int},
-		{'r', reverso},
-		{'R', rot13_conv},
-		{'b', print_binary},
 		{'\0', NULL}
 	};
 
@@ -25,8 +22,8 @@ int _printf(const char *format, ...)
 	if (format == NULL)
 		return (-1);
 
-	len = compare(format, specifier, args);
+	length = compare(format, specifier, args);
 
 	va_end(args);
-	return (len);
+	return (length);
 }

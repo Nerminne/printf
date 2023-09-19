@@ -13,7 +13,7 @@ int print_binary(va_list args)
 	char temp;
 	int i = 0;
 
-	if  (num < 0)
+	if (num < 0)
 		binary[i] = '1';
 	else
 		binary[i] = '0';
@@ -36,5 +36,5 @@ int print_binary(va_list args)
 		binary[i - x - 1] = temp;
 	}
 	write(1, binary, i - 1);
-	return(i - 1);
+	return (i - 1);
 }

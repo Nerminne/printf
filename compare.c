@@ -18,7 +18,7 @@ int compare(const char *format, special specifier[], va_list args)
 			if (format[i + 1] == '\0')
 				return (-1);
 			i++;
-			for (j = 0; j < 7; j++)
+			for (j = 0; j < 8; j++)
 			{
 				while (format[i] == ' ')
 				{
